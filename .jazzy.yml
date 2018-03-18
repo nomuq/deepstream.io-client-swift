@@ -1,0 +1,8 @@
+author: Satish Babariya
+author_url: https://twitter.com/Satisshu
+github_url: https://github.com/satishbabariya/DeepstreamIO
+root_url: https://satishbabariya.github.io/DeepstreamIO/
+module: DeepstreamIO
+output: docs
+theme: fullwidth
+xcodebuild_arguments: [-workspace, 'DeepstreamIO.xcworkspace', -scheme, 'DeepstreamIO-iOS']
