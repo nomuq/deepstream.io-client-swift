@@ -15,9 +15,9 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/daltoniam/Starscream", .upToNextMinor(from: "3.0.0")),
-        ],
+    ],
     targets: [
         .target(name: "DeepstreamIO", dependencies: ["Starscream"]),
         .testTarget(name: "TestDeepstreamIO", dependencies: ["DeepstreamIO"]),
-        ]
+    ]
 )

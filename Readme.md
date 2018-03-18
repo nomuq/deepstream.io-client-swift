@@ -1,4 +1,25 @@
-# DeepstreamIO
+# deepstream.io-client-swift
+
+A *work-in-progress* and *not-ready-for-production-use* Swift client for [deepstreamIO](https://github.com/deepstreamIO). Watch this space for more details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [![Platforms](https://img.shields.io/cocoapods/p/DeepstreamIO.svg)](https://cocoapods.org/pods/DeepstreamIO)
 [![License](https://img.shields.io/cocoapods/l/DeepstreamIO.svg)](https://raw.githubusercontent.com/satishbabariya/DeepstreamIO/master/LICENSE)
@@ -195,7 +216,7 @@ Issues and pull requests are welcome!
 
 ## Author
 
-Satish Babariya [@Satisshu](https://twitter.com/Satisshu)
+Satish Babariya
 
 ## License
 
