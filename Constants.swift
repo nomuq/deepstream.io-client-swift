@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Action : String{
+enum Action : String ,Codable{
     case Error = "E"
     case Ping = "PI"
     case Pong = "PO"
@@ -44,7 +44,7 @@ enum Action : String{
     case WriteAcknowledgement = "WA"
 }
 
-enum ConnectionState: String {
+enum ConnectionState: String ,Codable{
     case Closed = "CLOSED"
     case AwaitingConnection = "AWAITING_CONNECTION"
     case Challenging = "CHALLENGING"
@@ -55,12 +55,12 @@ enum ConnectionState: String {
     case Reconnecting = "RECONNECTING"
 }
 
-enum GlobalConnectivityState : String{
+enum GlobalConnectivityState : String,Codable{
     case Connected = "CONNECTED"
     case Disconnected = "DISCONNECTED"
 }
 
-enum Event: String{
+enum Event: String,Codable{
     case UnauthenticatedConnectiontimeout = "UNAUTHENTICATED_CONNECTION_TIMEOUT"
     case ConnectionError = "CONNECTION_ERROR"
     case ConnectionStateChanged = "CONNECTION_STATE_CHANGED"
@@ -84,7 +84,7 @@ enum Event: String{
 }
 
 
-enum Type: String {
+enum Type: String ,Codable{
     case String = "S"
     case Object = "O"
     case Number = "N"
@@ -94,7 +94,7 @@ enum Type: String {
     case Undefined = "U"
 }
 
-enum Topic: String {
+enum Topic: String ,Codable{
     case Connection = "C"
     case Auth = "A"
     case Error = "X"
@@ -104,7 +104,7 @@ enum Topic: String {
     case Presence = "U"
 }
 
-enum RecordMergeStrategy: String {
+enum RecordMergeStrategy: String ,Codable{
     case RemoteWins = "REMOTE_WINS"
     case LocalWins = "LOCAL_WINS"
 }
