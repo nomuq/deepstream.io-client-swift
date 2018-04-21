@@ -1,14 +1,9 @@
 
-import Foundation
 
 // TODO: Check if this works
 
-protocol ClientOption: CustomStringConvertible, Equatable {
-    func getConfigOptionsValue() -> Any
-}
-
 /// The options for a client.
-public enum ConfigOptions: ClientOption {
+public enum ConfigOptions {
     
     /**
      * Default path to use when connection using websockets
@@ -75,6 +70,9 @@ public enum ConfigOptions: ClientOption {
      */
     case RECORD_MERGE_STRATEGY
     
+    /// If passed `true`, the client will log debug information. This should be turned off in production code.
+    case log(Bool)
+    
     // MARK: Properties
     
     /// The description of this option.
@@ -107,16 +105,17 @@ public enum ConfigOptions: ClientOption {
             return "recordDeleteTimeout"
         case .RECORD_MERGE_STRATEGY:
             return "recordMergeStrategy"
+        case .log:
+            return "log"
         }
     }
     
-    func getConfigOptionsValue() -> Any {
-        let value: Any
+    public func getConfigOptionsValue() -> Any {
         
         switch self {
             
         case .PATH:
-            value = "/deepstream"
+            return "/deepstream"
         case .RECONNECT_INTERVAL_INCREMENT:
             return 4000
         case .MAX_RECONNECT_INTERVAL:
@@ -141,9 +140,9 @@ public enum ConfigOptions: ClientOption {
             return 3000
         case .RECORD_MERGE_STRATEGY:
             return "REMOTE_WINS"
+        case .log(let log):
+            return log
         }
-        
-        return value
     }
     
     // MARK: Operators

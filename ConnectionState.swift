@@ -1,9 +1,9 @@
 
-
+import Foundation
 /**
  * Provides all the different connection states a deepstream client can go through its lifetime
  */
-public enum ConnectionState {
+@objc public enum ConnectionState: Int {
     /**
      * Connection is closed, usually due to closing the client or getting multiple authentication rejects
      * from server

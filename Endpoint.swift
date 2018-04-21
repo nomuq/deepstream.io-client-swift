@@ -10,21 +10,23 @@ import Foundation
      * @param message The message to send (TOPIC|ACTION|ARRAY+)
      */
     
-    func send(_ msg: String);
+    func send(_ msg: String)
     
     /**
      * Close the connection
      */
-    func close();
+    func close()
     
     /**
      * Open the connection
      */
-    func open();
+    func open()
     
     /**
      * Forces the connection to be closed
      */
-    func forceClose();
+    func forceClose()
     
 }
+
+
